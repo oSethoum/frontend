@@ -619,7 +619,7 @@
     "@floating-ui/dom" "^0.5.3"
     use-isomorphic-layout-effect "^1.1.1"
 
-"@graphql-codegen/cli@^2.7.0":
+"@graphql-codegen/cli@2.7.0":
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/cli/-/cli-2.7.0.tgz#610f3cb2798d581fff3af8d8ba522113a1811fc5"
   integrity sha512-qlBcS6jGfZ/xWXwqiyRLHGRuLC9gUdF8AwGHN7LdAYEP5MjL7pIXb02W5JuvMn47rrvr2Q22H9ECppZX65oSAg==

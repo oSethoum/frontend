@@ -9,8 +9,6 @@
     "generate": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "@graphql-codegen/cli": "^2.7.0",
-    "@graphql-codegen/typescript-urql": "^3.5.13",
     "@mantine/carousel": "5.0.0-alpha.19",
     "@mantine/core": "5.0.0-alpha.19",
     "@mantine/dates": "5.0.0-alpha.19",
@@ -42,6 +40,7 @@
     "@graphql-codegen/typescript": "2.6.0",
     "@graphql-codegen/typescript-operations": "2.4.3",
     "@graphql-codegen/urql-introspection": "2.1.1",
+    "@graphql-codegen/typescript-urql": "^3.5.13",
     "@types/node": "^18.0.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
