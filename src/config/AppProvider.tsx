@@ -27,7 +27,11 @@ export function AppProvider({ children }: IAppProvider) {
 
   return (
     <Provider value={client}>
-      <MantineProvider>
+      <MantineProvider
+        theme={{ colorScheme: "dark" }}
+        withGlobalStyles
+        withNormalizeCSS
+      >
         <NotificationsProvider>
           <ModalsProvider>{children}</ModalsProvider>
         </NotificationsProvider>

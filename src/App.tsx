@@ -1,10 +1,13 @@
-import { Button, Center } from "@mantine/core";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "@/ui";
 
 function App() {
   return (
-    <Center sx={{ height: "100vh" }}>
-      <Button>Hello</Button>
-    </Center>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
