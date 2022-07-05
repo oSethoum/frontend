@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "@graphql-codegen/cli": "^2.7.0",
+    "@graphql-codegen/typescript-urql": "^3.5.13",
     "@mantine/carousel": "5.0.0-alpha.19",
     "@mantine/core": "5.0.0-alpha.19",
     "@mantine/dates": "5.0.0-alpha.19",
@@ -23,6 +26,7 @@
     "dayjs": "^1.11.3",
     "embla-carousel-react": "^7.0.0-rc01",
     "graphql": "^16.5.0",
+    "graphql-tag": "^2.12.6",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
@@ -30,6 +34,10 @@
     "zustand": "^4.0.0-rc.1"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.7.0",
+    "@graphql-codegen/typescript": "2.6.0",
+    "@graphql-codegen/typescript-operations": "2.4.3",
+    "@graphql-codegen/urql-introspection": "2.1.1",
     "@types/node": "^18.0.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
