@@ -2,13 +2,15 @@ import { MantineProvider } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import { NotificationsProvider } from "@mantine/notifications";
 import { useMemo } from "react";
-import { createClient } from "urql";
+import { createClient, Provider } from "urql";
+import { useTokenStore } from "./auth";
 
 interface IAppProvider {
   children: React.ReactNode;
 }
 
 export function AppProvider({ children }: IAppProvider) {
+  const { token } = useTokenStore();
   const client = useMemo(
     () =>
       createClient({
@@ -16,19 +18,21 @@ export function AppProvider({ children }: IAppProvider) {
         fetchOptions: {
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer " + process.env.TOKEN,
+            Authorization: "Bearer " + token,
           },
         },
       }),
-    []
+    [token]
   );
 
   return (
-    <MantineProvider>
-      <NotificationsProvider>
-        <ModalsProvider>{children}</ModalsProvider>
-      </NotificationsProvider>
-    </MantineProvider>
+    <Provider value={client}>
+      <MantineProvider>
+        <NotificationsProvider>
+          <ModalsProvider>{children}</ModalsProvider>
+        </NotificationsProvider>
+      </MantineProvider>
+    </Provider>
   );
 }
 
