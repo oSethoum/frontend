@@ -1,6 +1,6 @@
 import { Title, Center } from "@mantine/core";
 
-export function Home() {
+export function HomePage() {
   return (
     <Center sx={{ height: "100vh" }}>
       <Title>Home</Title>
@@ -8,4 +8,4 @@ export function Home() {
   );
 }
 
-export default Home;
+export default HomePage;
