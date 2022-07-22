@@ -36,7 +36,6 @@ specifiers:
   typescript: ^4.6.3
   urql: ^2.2.2
   vite: ^2.9.9
-  zustand: ^4.0.0-rc.1
 
 dependencies:
   '@mantine/carousel': 5.0.0-alpha.22_ttc56voxe2bp35ptktgydmxgou
@@ -63,7 +62,6 @@ dependencies:
   stylis: 4.1.1
   stylis-plugin-rtl: 2.1.1_stylis@4.1.1
   urql: 2.2.2_aez2jvt6lsvokp3l4ousdbdxf4
-  zustand: 4.0.0-rc.3_react@18.2.0
 
 devDependencies:
   '@graphql-codegen/cli': 2.7.0_p7o4yzurmquff3dtfslv7p2xx4
@@ -4764,14 +4762,6 @@ packages:
       use-isomorphic-layout-effect: 1.1.2_3hx2ussxxho4jajbwrd6gq34qe
     dev: false
 
-  /use-sync-external-store/1.2.0_react@18.2.0:
-    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
-    dev: false
-
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
@@ -4961,19 +4951,3 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
-
-  /zustand/4.0.0-rc.3_react@18.2.0:
-    resolution: {integrity: sha512-vc7TKQJC6T8lx5EupnuUTWXahuRLYjrK9oWLvY+u65ZkLDjocgxDGMrl5VBuxyjXCXyJ3kquN3l/Y2yUj5ZDEg==}
-    engines: {node: '>=12.7.0'}
-    peerDependencies:
-      immer: '>=9.0'
-      react: '>=16.8'
-    peerDependenciesMeta:
-      immer:
-        optional: true
-      react:
-        optional: true
-    dependencies:
-      react: 18.2.0
-      use-sync-external-store: 1.2.0_react@18.2.0
-    dev: false

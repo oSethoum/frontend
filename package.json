@@ -1,7 +1,7 @@
 {
   "name": "react-mantine-urql-i18n",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -32,8 +32,7 @@
     "react-router-dom": "^6.3.0",
     "stylis": "^4.1.1",
     "stylis-plugin-rtl": "^2.1.1",
-    "urql": "^2.2.2",
-    "zustand": "^4.0.0-rc.1"
+    "urql": "^2.2.2"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "2.7.0",
