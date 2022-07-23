@@ -18,6 +18,7 @@ specifiers:
   '@mantine/prism': 5.0.0-alpha.22
   '@mantine/rte': 5.0.0-alpha.22
   '@mantine/spotlight': 5.0.0-alpha.22
+  '@tabler/icons': ^1.78.0
   '@types/node': ^18.0.1
   '@types/react': ^18.0.0
   '@types/react-dom': ^18.0.0
@@ -50,6 +51,7 @@ dependencies:
   '@mantine/prism': 5.0.0-alpha.22_knawbabmol6rked2nv74g7gsyy
   '@mantine/rte': 5.0.0-alpha.22_knawbabmol6rked2nv74g7gsyy
   '@mantine/spotlight': 5.0.0-alpha.22_knawbabmol6rked2nv74g7gsyy
+  '@tabler/icons': 1.78.0_biqbaboplfbrettd7655fr4n2y
   dayjs: 1.11.4
   embla-carousel-react: 7.0.0-rc05_react@18.2.0
   graphql: 16.5.0
@@ -1480,7 +1482,7 @@ packages:
     dependencies:
       '@mantine/core': 5.0.0-alpha.22_khlooru5b2cukvkgaopkqmfi5m
       '@mantine/hooks': 5.0.0-alpha.22_react@18.2.0
-      '@tabler/icons': 1.76.0_biqbaboplfbrettd7655fr4n2y
+      '@tabler/icons': 1.78.0_biqbaboplfbrettd7655fr4n2y
       quill-mention: 3.1.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -1697,8 +1699,8 @@ packages:
       defer-to-connect: 1.1.3
     dev: true
 
-  /@tabler/icons/1.76.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-MEN8cWpnYoY0BcPgrtwnkA+U3y5uP6haMqsX1jq5xbej9KZK9EnWc+J2Xi3X3y5HUtTsSeQry+qEOxCzrxw9EQ==}
+  /@tabler/icons/1.78.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-Aq4mHpQcvJSRb0+m1azJPDs/0ZvyoR1da8JmLMzVfObS1tRcJYsvuxBJfYCreFtBT33w4PtBTD+7J+2hk8JTQw==}
     peerDependencies:
       react: ^16.x || 17.x || 18.x
       react-dom: ^16.x || 17.x || 18.x
