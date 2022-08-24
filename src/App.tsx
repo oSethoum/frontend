@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HomePage } from "@/ui";
 import { createClient, Provider } from "urql";
 import { createContext, useMemo, useState } from "react";
-import { useLocalStorage } from "@mantine/hooks";
+import { useColorScheme, useLocalStorage } from "@mantine/hooks";
+import { Button, useMantineColorScheme } from "@mantine/core";
 
 interface IAppContext {
   url: string;
@@ -18,6 +19,7 @@ export const AppContext = createContext<IAppContext>({
 
 function App() {
   const [url, setUrl] = useState("127.0.0.1:3001");
+  const { toggleColorScheme } = useMantineColorScheme();
   const [token, setToken] = useLocalStorage({
     key: "jwtToken",
     defaultValue: "",

@@ -1,11 +1,11 @@
-import { Title, Center } from "@mantine/core";
-import { IconAB } from "@tabler/icons";
+import { Title, Center, Button, useMantineColorScheme } from "@mantine/core";
 
 export function HomePage() {
+  const { toggleColorScheme } = useMantineColorScheme();
   return (
     <Center sx={{ height: "100vh" }}>
       <Title>
-        <IconAB size={128} />
+        <Button onClick={() => toggleColorScheme()}>Toggle</Button>
       </Title>
     </Center>
   );
