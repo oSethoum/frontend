@@ -18,22 +18,44 @@ export const AppContext = createContext<IAppContext>({
 });
 
 function App() {
-  const [url, setUrl] = useState("127.0.0.1:3001");
+  const [url, setUrl] = useState("localhost:3001");
   const { toggleColorScheme } = useMantineColorScheme();
   const [token, setToken] = useLocalStorage({
     key: "jwtToken",
     defaultValue: "",
   });
+  
+  const wsClient = useMemo(
+    () =>
+      createWSClient({
+        url: "ws://"+url+"/subscriptions",
+        connectionParams: async () => {
+          return { token: "Bearer " + token };
+        },
+      }),
+    []
+  );
+
   const client = useMemo(
     () =>
       createClient({
-        url: url + "/query",
+        url: "http://"+url+ "/query",
         fetchOptions: {
           headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer " + token,
           },
         },
+        exchanges: [
+          ...defaultExchanges,
+          subscriptionExchange({
+            forwardSubscription: (operation) => ({
+              subscribe: (sink) => ({
+                unsubscribe: wsClient.subscribe(operation, sink),
+              }),
+            }),
+          }),
+        ],
       }),
     [token]
   );
