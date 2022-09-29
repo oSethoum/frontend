@@ -1,9 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HomePage } from "@/ui";
-import { createClient, Provider } from "urql";
+import {
+  createClient,
+  Provider,
+  defaultExchanges,
+  subscriptionExchange,
+} from "urql";
 import { createContext, useMemo, useState } from "react";
-import { useColorScheme, useLocalStorage } from "@mantine/hooks";
-import { Button, useMantineColorScheme } from "@mantine/core";
+import { useLocalStorage } from "@mantine/hooks";
+import { useMantineColorScheme } from "@mantine/core";
+import { createClient as createWSClient } from "graphql-ws";
 
 interface IAppContext {
   url: string;
@@ -24,11 +30,11 @@ function App() {
     key: "jwtToken",
     defaultValue: "",
   });
-  
+
   const wsClient = useMemo(
     () =>
       createWSClient({
-        url: "ws://"+url+"/subscriptions",
+        url: "ws://" + url + "/subscriptions",
         connectionParams: async () => {
           return { token: "Bearer " + token };
         },
@@ -39,7 +45,7 @@ function App() {
   const client = useMemo(
     () =>
       createClient({
-        url: "http://"+url+ "/query",
+        url: "http://" + url + "/query",
         fetchOptions: {
           headers: {
             "Content-Type": "application/json",
